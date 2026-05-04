@@ -14,7 +14,6 @@ contributes:
       incremental: true
       smaller: false
       background-transition: concave
-      
       highlight-style: arrow
       code-line-numbers: false
       self-contained: false

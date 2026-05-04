@@ -6,7 +6,7 @@ contributes:
   formats:
     revealjs:
       theme: [simple, custom.scss]
-      chalkboard: true
+      chalkboard: false
       preview-links: true
       incremental: true
       smaller: false
@@ -15,3 +15,6 @@ contributes:
       highlight-style: arrow
       code-line-numbers: false
       self-contained: false
+      out-width: "100%"
+      fig-asp: 0.5625
+      fig-format: svg

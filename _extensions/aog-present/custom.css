@@ -1,5 +1,5 @@
 
-// Set default colors
+/* Set default colors */
 :root {
   --primary-color: #131516;
   --secondary-color: #3A3F42;
@@ -12,13 +12,13 @@
 }
 
 
-// Import fonts
+/* Import fonts */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Fira+Mono&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
 
-// Set colors
+/* Set colors */
 .reveal-viewport {
   background: var(--bg-color) !important;
 }
@@ -28,49 +28,71 @@
 }
 
 .reveal .slides {
-  color: var(--primary) !important;
+  color: var(--primary-color) !important;
 }
 
 
-// Title slide
+
+/* Title slide */
+.reveal #title-slide {
+  text-align: left !important;
+}
+
 #title-slide {
   text-align: left;
 }
 
+/* Title */
 #title-slide .title {
-  color: var(--accent2);
-  font-size: 1.4em;
+  color: var(--seondary-color) !important;
+  font-size: 1.5em;
   font-weight: 350;
 }
 
+/* Subtitle */
 #title-slide .subtitle {
   color: var(--accent1);
   margin-top: 0em;
 }
 
+/* Affiliation + email */
 #title-slide .institute,
 #title-slide .quarto-title-affiliation,
 #title-slide .quarto-title-author-email {
-  color: var(--secondary);
+  color: var(--secondary-color);
 }
 
+/* Author name */
 #title-slide .author,
 #title-slide .quarto-title-author-name {
-  color: var(--primary);
+  color: var(--primary-color);
 }
 
+/* Author container */
 #title-slide .quarto-title-authors {
   display: flex;
   justify-content: left;
 }
 
-#title-slide .quarto-title-author {
-  padding-left: 0;
-  padding-right: 0;
+#title-slide .quarto-title-authors .quarto-title-author {
+  padding-left: 0em;
+  padding-right: 0em;
   width: 100%;
 }
 
-# Headings
+/* Horizontal rule effect before author block */
+#title-slide p.author::before,
+#title-slide div.quarto-title-author::before {
+  content: "";
+  display: block;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--primary-color);
+  height: 3px;
+  margin-bottom: 1em;
+}
+
+/* Headings */
 .reveal h2 {
   font-weight: 350;
   font-size: 1.2em;
@@ -97,7 +119,7 @@
   font-size: calc(1.05em / 0.7) !important;
 }
 
-// Lists 
+/* Lists */
 .reveal ul {
   font-weight: 300;
   padding-left: 16px;
@@ -148,7 +170,7 @@
   font-weight: 100;
 }
 
-// Captions
+/* Captions */
 .reveal p.caption {
   color: var(--secondary);
   text-align: center !important;

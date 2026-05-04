@@ -38,10 +38,6 @@
   text-align: left !important;
 }
 
-#title-slide {
-  text-align: left;
-}
-
 /* Title */
 #title-slide .title {
   color: var(--seondary-color) !important;

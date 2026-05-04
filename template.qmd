@@ -30,7 +30,8 @@ library(palmerpenguins)
 ```
 
 ```{r}
-theme_myslides <- theme_bw()+
+theme_present <- function(base_size = 20) {
+  theme_bw()+
   theme(plot.title = element_text(size=24, hjust=0),
         plot.title.position = "panel",
         plot.subtitle = element_text(size=16, hjust=0),
@@ -51,7 +52,8 @@ theme_myslides <- theme_bw()+
         legend.background = element_rect(fill = "#EAEBEE",colour = NA),
         legend.key = element_rect(fill = "#EAEBEE",colour = NA), 
         legend.position = "right")
-theme_set(theme_myslides)
+}
+set_theme(theme_present())
 ```
 
 # An Inverse Cover Slide {background-color="#18273F" background-image="images/mikael-kristenson-3aVlWP-7bg8-unsplash.jpg"}
@@ -60,7 +62,7 @@ theme_set(theme_myslides)
 
 - A really [important](https://google.com) point
 - This is also `important`
-- But don't forget this other thing
+- But don't forget **this** other *thing*
   - Although on the other hand, one should consider this
 
 ::: {.notes}
@@ -142,8 +144,7 @@ This table was produced directly in `gt`. I also fit more on this slide by speci
 ## Figures Also Work Well
 
 ```{r}
-#| label: fig-dist
-#| fig-cap: Flipper length and body mass for Adelie, Chinstrap and Gentoo Penguins
+#| label: dist-fig
 ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
   geom_point(aes(color = species, shape = species), size = 3, alpha = 0.8) +
   scale_color_manual(values = c("darkorange","purple","cyan4")) +

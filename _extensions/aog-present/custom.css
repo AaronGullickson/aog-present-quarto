@@ -1,0 +1,166 @@
+
+// Set default colors
+:root {
+  --primary-color: #131516;
+  --secondary-color: #3A3F42;
+  --bg-color: #F4F4F2;
+  --accent1: #1F4E79;
+  --accent2: #2C5D63;
+  --accent3: #6B2C3E;
+  
+  --link-color: var(--accent3);
+}
+
+
+// Import fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Fira+Mono&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+
+// Set colors
+.reveal-viewport {
+  background: var(--bg-color) !important;
+}
+
+.reveal {
+  background: var(--bg-color) !important;
+}
+
+.reveal .slides {
+  color: var(--primary) !important;
+}
+
+
+// Title slide
+#title-slide {
+  text-align: left;
+}
+
+#title-slide .title {
+  color: var(--accent2);
+  font-size: 1.4em;
+  font-weight: 350;
+}
+
+#title-slide .subtitle {
+  color: var(--accent1);
+  margin-top: 0em;
+}
+
+#title-slide .institute,
+#title-slide .quarto-title-affiliation,
+#title-slide .quarto-title-author-email {
+  color: var(--secondary);
+}
+
+#title-slide .author,
+#title-slide .quarto-title-author-name {
+  color: var(--primary);
+}
+
+#title-slide .quarto-title-authors {
+  display: flex;
+  justify-content: left;
+}
+
+#title-slide .quarto-title-author {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+# Headings
+.reveal h2 {
+  font-weight: 350;
+  font-size: 1.2em;
+}
+
+.reveal h3 {
+  color: var(--accent1);
+  font-weight: 350;
+  font-size: 1.05em;
+  margin-top: 0.5em;
+}
+
+.reveal h4 {
+  color: var(--accent2);
+  font-weight: 350;
+  margin-top: 0.5em;
+}
+
+.reveal .slides section.smaller h2 {
+  font-size: calc(1.2em / 0.7) !important;
+}
+
+.reveal .slides section.smaller h3 {
+  font-size: calc(1.05em / 0.7) !important;
+}
+
+// Lists 
+.reveal ul {
+  font-weight: 300;
+  padding-left: 16px;
+}
+
+.reveal ul li::marker {
+  color: color-mix(in srgb, var(--accent1), white 30%);
+}
+
+.reveal ul ul {
+  list-style: none;
+}
+
+.reveal ul ul li::before {
+  content: var(--right-arrow);
+  color: color-mix(in srgb, var(--accent1), white 40%);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  margin-right: 0.5em;
+}
+
+.reveal ul ul ul li::before {
+  content: "\22B3";
+  color: color-mix(in srgb, var(--accent1), white 40%);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  margin-right: 0.5em;
+}
+
+.reveal ol {
+  font-weight: 300;
+  padding-left: 16px;
+}
+
+.reveal ol li::marker {
+  color: var(--accent1);
+}
+
+.reveal dt {
+  font-family: "Poppins";
+  color: var(--accent2);
+}
+
+.reveal dd {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+}
+
+// Captions
+.reveal p.caption {
+  color: var(--secondary);
+  text-align: center !important;
+  margin-top: 0.5em;
+}
+
+.reveal .slides section p.caption,
+.reveal .slides section p.caption * {
+  font-size: 0.7em !important;
+}
+
+figcaption {
+  text-align: center;
+  color: var(--secondary);
+}

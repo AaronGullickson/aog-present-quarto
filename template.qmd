@@ -29,7 +29,8 @@ theme_present <- function(base_size = 20) {
   theme(panel.background = element_rect(fill = "#F4F4F2",colour = NA),
         plot.background = element_rect(fill = "#F4F4F2",colour = NA),
         legend.background = element_rect(fill = "#F4F4F2",colour = NA),
-        legend.key = element_rect(fill = "#F4F4F2",colour = NA))
+        legend.key = element_rect(fill = "#F4F4F2",colour = NA),
+        text = element_text(family = "Open Sans"))
 }
 set_theme(theme_present())
 ```
@@ -157,6 +158,20 @@ This table was produced directly in `gt`. I also fit more on this slide by speci
 
 ```{r}
 #| label: dist-fig
+ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point(aes(color = species, shape = species), size = 3, alpha = 0.8) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(x = "Flipper length (mm)",
+       y = "Body mass (g)",
+       color = "Penguin species",
+       shape = "Penguin species")
+```
+
+---
+
+```{r}
+#| label: fig-dist
+#| fig-cap: A Figure Caption Goes Here
 ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
   geom_point(aes(color = species, shape = species), size = 3, alpha = 0.8) +
   scale_color_manual(values = c("darkorange","purple","cyan4")) +

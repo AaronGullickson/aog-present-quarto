@@ -1,17 +1,4 @@
 
-/* Set default colors */
-:root {
-  --primary-color: #131516;
-  --secondary-color: #3A3F42;
-  --bg-color: #F4F4F2;
-  --accent1: #1F4E79;
-  --accent2: #6B2C3E;
-  --accent3: #2C5D63;
-  
-  --link-color: var(--accent3);
-}
-
-
 /* Set fonts */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400&display=swap);
@@ -60,6 +47,7 @@
 #title-slide .subtitle {
   color: var(--accent1);
   margin-top: 0em;
+  font-weight: 550;
 }
 
 /* Affiliation + email */
@@ -123,13 +111,6 @@
   margin-top: 0.5em;
 }
 
-.reveal h5 {
-  color: var(--accent3);
-  font-weight: 450;
-  font-size: 1.05em;
-  margin-top: 0.4em;
-}
-
 .reveal .slides section.smaller h2 {
   font-size: calc(1.25em / 0.7) !important;
 }
@@ -149,7 +130,7 @@
 }
 
 .reveal ul li::marker {
-  color: color-mix(in srgb, var(--accent1), white 30%);
+  color: var(--accent1);
 }
 
 .reveal ul ul {
@@ -158,7 +139,7 @@
 
 .reveal ul ul li::before {
   content: var(--right-arrow);
-  color: color-mix(in srgb, var(--accent1), white 40%);
+  color: var(--accent1);
   display: inline-block;
   width: 1em;
   margin-left: -1em;

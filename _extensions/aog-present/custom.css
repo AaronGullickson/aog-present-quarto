@@ -30,6 +30,10 @@
   color: var(--primary-color) !important;
 }
 
+.reveal a { 
+  color: var(--accent2); 
+}
+
 /* Title slide */
 .reveal #title-slide {
   text-align: left !important;
@@ -158,12 +162,21 @@
   font-weight: 100;
 }
 
-/* Captions */
-.reveal p.caption {
-  color: var(--secondary);
-  text-align: center !important;
-  margin-top: 0.5em;
+/* progress and menu bar on bottom */
+
+.reveal .progress span {
+  background: var(--accent2);
 }
+
+/* Footer */
+
+.reveal .footer {
+  color: var(--secondary-color);
+  font-size: 0.3em !important;
+  opacity: 0.8;
+}
+
+
 
 .reveal .slides section p.caption,
 .reveal .slides section p.caption * {

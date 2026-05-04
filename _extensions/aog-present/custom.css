@@ -137,28 +137,6 @@
   color: var(--accent1);
 }
 
-.reveal ul ul {
-  list-style: none;
-}
-
-.reveal ul ul li::before {
-  content: var(--right-arrow);
-  color: var(--accent1);
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-  margin-right: 0.5em;
-}
-
-.reveal ul ul ul li::before {
-  content: "\22B3";
-  color: color-mix(in srgb, var(--accent1), white 40%);
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-  margin-right: 0.5em;
-}
-
 .reveal ol {
   font-weight: 300;
   padding-left: 16px;
@@ -168,12 +146,14 @@
   color: var(--accent1);
 }
 
+
 .reveal dt {
   font-family: "Poppins";
   color: var(--accent2);
 }
 
 .reveal dd {
+  margin-bottom: 0.5em;
   font-family: "Open Sans", sans-serif;
   font-weight: 100;
 }

@@ -30,7 +30,6 @@
   color: var(--primary-color) !important;
 }
 
-
 /* Title slide */
 .reveal #title-slide {
   text-align: left !important;
@@ -86,6 +85,11 @@
   height: 3px;
   margin-bottom: 1em;
 }
+
+.reveal p {
+  margin-top: 0.25em;
+}
+
 
 /* Headings */
 .reveal h1 {
